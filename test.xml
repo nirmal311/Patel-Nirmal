@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<demoContent>
+    
+    <metadata>
+        <title>Demo Content XML</title>
+        <author>John Doe</author>
+        <created>2024-12-30</created>
+        <version>1.0</version>
+    </metadata>
+
+    <content>
+        <section id="intro">
+            <header>Welcome to the Demo</header>
+            <paragraph>
+                This is a simple demo XML file. It contains various types of content 
+                including text, images, and prompts.
+            </paragraph>
+        </section>
+
+        <section id="textContent">
+            <header>Section: Text Content</header>
+            <paragraph>
+                XML allows you to structure different types of content such as 
+                text, images, and other multimedia. Here is an example of text content.
+            </paragraph>
+        </section>
+
+        <section id="images">
+            <header>Section: Images</header>
+            <paragraph>
+                Below is an example of how to include image links in XML.
+            </paragraph>
+            <image src="https://www.pexels.com/photo/green-and-blue-peacock-feather-674010/" alt="Sample Image 1" />
+            <image src="https://www.pexels.com/photo/close-up-photo-of-glowing-blue-butterflies-326055/" alt="Sample Image 2" />
+        </section>
+
+        <section id="prompt">
+            <header>Section: Prompt</header>
+            <paragraph>
+                Please follow the instructions below:
+            </paragraph>
+            <prompt>
+                Enter your name:
+            </prompt>
+            <input type="text" id="name" placeholder="Your name here" />
+        </section>
+
+        <section id="conclusion">
+            <header>Conclusion</header>
+            <paragraph>
+                This XML file is designed to demonstrate how different types of content 
+                can be represented in XML format.
+            </paragraph>
+        </section>
+    </content>
+
+    <application name="Reload" language="en_US">
+        <synopsis>
+            Reloads an Asterisk module, blocking the channel until the reload has completed.
+        </synopsis>
+        <syntax>
+            <parameter name="module" required="false">
+                <para>The full name(s) of the target module(s) or resource(s) to reload.
+                If omitted, everything will be reloaded.</para>
+                <para>The full names MUST be specified (e.g. <literal>chan_iax2</literal>
+                to reload IAX2 or <literal>pbx_config</literal> to reload the dialplan.</para>
+            </parameter>
+        </syntax>
+        <description>
+            <para>Reloads the specified (or all) Asterisk modules and reports success or failure.
+            Success is determined by each individual module, and if all reloads are successful,
+            that is considered an aggregate success. If multiple modules are specified and any
+            module fails, then FAILURE will be returned. It is still possible that other modules
+            did successfully reload, however.</para>
+            <para>Sets <variable>RELOADSTATUS</variable> to one of the following values:</para>
+            <variablelist>
+                <variable name="RELOADSTATUS">
+                    <value name="SUCCESS">
+                        Specified module(s) reloaded successfully.
+                    </value>
+                    <value name="FAILURE">
+                        Some or all of the specified modules failed to reload.
+                    </value>
+                </variable>
+            </variablelist>
+        </description>
+    </application>
+    
+    <footer>
+        <copyright>2024 John Doe</copyright>
+        <contact>Email: johndoe@example.com</contact>
+    </footer>
+</demoContent>
